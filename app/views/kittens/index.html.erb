@@ -1,5 +1,9 @@
 <%@kittens.each do |kitten|%>
+<div >
 Name:<%= kitten.name%>
+<%=link_to "View Kitten", kitten_path(kitten)%>
  <%= button_to "Delete", @kitten, :method => :delete %>
+</div>
 
 <%end%>
+Hi Kittens Index

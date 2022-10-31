@@ -8,6 +8,10 @@ class KittensController < ApplicationController
         @kitten = Kitten.new()
     end 
 
+    def show
+        @kitten = Kitten.find(params[:id])
+    end 
+
     def create 
         @kitten = Kitten.new(kitten_params)
         if @kitten.save
@@ -37,7 +41,8 @@ class KittensController < ApplicationController
     end 
 
     private 
+
     def kitten_params
-        params.require(kitten).permit(:name, :age, :cuteness, :softness)
+        params.require(:kitten).permit(:name, :age, :cuteness, :softness)
     end 
 end

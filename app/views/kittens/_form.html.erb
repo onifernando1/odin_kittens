@@ -1,11 +1,11 @@
-<%=form_with model: @kitten, data:{turbo:false} do |form| %>
+<%=form_with model: @kitten, data:{turbo:false} do |f| %>
 <%=f.label :name, "Name"%>
 <%=f.text_field :name%>
 <%=f.label :age, "Age"%>
 <%=f.number_field :age%>
 <%=f.label :softness, "Softness"%>
-<%=f.number_field :softness%>
+<%=f.text_field :softness%>
 <%=f.label :cuteness, "Cuteness"%>
-<%=f.number_field :cuteness%>
+<%=f.text_field :cuteness%>
 <%=f.submit%>
 <%end%>

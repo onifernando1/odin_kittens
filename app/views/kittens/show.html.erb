@@ -1,5 +1,9 @@
+<div>
 Name:<%= @kitten.name%>
 Age:<%= @kitten.age%>
 Cuteness:<%= @kitten.cuteness%>
 Softness:<%= @kitten.softness%>
+<%= link_to "Edit",edit_kitten_path(@kitten)%>
+
  <%= button_to "Delete", @kitten, :method => :delete %>
+ </div>
